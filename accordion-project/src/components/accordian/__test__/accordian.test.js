@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
-import App from './App';
+import Accordian from '../accordian';
 
 test('renders learn react link', () => {
-  render(<App />);
+  render(<Accordian />);
 });
