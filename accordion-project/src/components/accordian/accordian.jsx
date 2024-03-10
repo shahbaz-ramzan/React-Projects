@@ -1,5 +1,3 @@
-//single selection
-//multiple selection
 
 import { useState } from "react";
 import data from "./data";
@@ -18,20 +16,19 @@ export default function Accordian() {
     let copyMultiple = [...multiple];
     const findIndexOfCurrentId = copyMultiple.indexOf(getCurrentId);
 
-    console.log(findIndexOfCurrentId);
+    
     if (findIndexOfCurrentId === -1) copyMultiple.push(getCurrentId);
     else copyMultiple.splice(findIndexOfCurrentId, 1);
 
     setMultiple(copyMultiple);
   }
 
-  console.log(selected, multiple);
   return (
     <div className="acc-wrapper">
       <button onClick={() => setEnableMultiSelection(!enableMultiSelection)}>
         Enable Multi Selection
       </button>
-      <div className="accordian">
+      <div className="accordian" >
         {data && data.length > 0 ? (
           data.map((dataItem) => (
             <div className="item">
@@ -53,10 +50,6 @@ export default function Accordian() {
                 : selected === dataItem.id && (
                     <div className="acc-content ">{dataItem.answer}</div>
                   )}
-              {/* {selected === dataItem.id ||
-              multiple.indexOf(dataItem.id) !== -1 ? (
-                <div className="content">{dataItem.answer}</div>
-              ) : null} */}
             </div>
           ))
         ) : (
