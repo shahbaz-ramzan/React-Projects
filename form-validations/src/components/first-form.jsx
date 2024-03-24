@@ -1,5 +1,6 @@
 import { Button, DatePicker, Form, Select } from "antd"
 import Input from "antd/es/input/Input"
+import Password from "./password/password"
 
 function FirstForm() {
     const onFinish = (values) => {
@@ -56,8 +57,8 @@ function FirstForm() {
     >
       <DatePicker />
     </Form.Item>
-              <Button type="primary" htmlType="submit">Submit</Button>
-          </Form>
+        <Button type="primary" htmlType="submit">Submit</Button>
+      </Form>
     </div>
   )
 }
