@@ -1,13 +1,11 @@
 import { Button, Form, Input, Popover } from "antd";
 import PasswordValidation from "./passwordValidation"; // Assuming this component is correctly implemented
-import { useForm } from "antd";
 import { useState } from "react";
 
 function Password() {
   const [password, setPassword] = useState('');
 
-  const form = useForm();
-
+  const [form] = Form.useForm(); 
   const resetPassword = async (values) => {
     console.log("Validating password", values);
   };
